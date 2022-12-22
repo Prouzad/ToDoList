@@ -1,5 +1,5 @@
 .tasksBox{
-	width: 99vw;
+	width: 100vw;
 	display: flex;
 	align-items: center;
 	margin-top: 45px;
@@ -8,6 +8,7 @@
 }
 
 .tasks {
+	cursor: pointer;
 	width: 735px;
 	min-height: 50px;
 	padding: 15px;
@@ -32,4 +33,14 @@
 .secondBox{
 	display: flex;
 	align-items: center;
+	width: 10%;
+	display: flex;
+	justify-content: space-evenly;
 }
+
+.name{
+	hyphens: auto;
+	word-wrap: break-word;
+	text-align: start;	
+}
+

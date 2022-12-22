@@ -10,7 +10,7 @@ function AddToDo() {
 				  e.preventDefault();
           dispatch({
             type: 'addTask',
-						tasks: [{_id: Date.now(), name: state?.inputValue}]
+						tasks: [{_id: Date.now(), name: state?.inputValue, done: false}]
           });
 					console.log(state)
 			}}>
