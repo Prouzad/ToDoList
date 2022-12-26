@@ -13,6 +13,8 @@ function App() {
 	const Startstates: IState = { 
 		tasks: [],
 		inputValue: '',
+		editTask: '',
+		
 	}
 	const [state, dispatch] = useReducer(reducer, Startstates);
 

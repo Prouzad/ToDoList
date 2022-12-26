@@ -20,6 +20,13 @@ export default function reducer(state: IState, action: IReducer) {
 				tasks: [...action!.tasks!],
 			};
 
+			case 'edit':
+				return {
+					...state,
+					editTask: action.inputValue,
+				};
+	
+
 		default:
 			return state;
 	}
