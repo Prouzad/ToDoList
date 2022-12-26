@@ -13,7 +13,7 @@ export interface IState {
 
 export interface IReducer {
   type?: string,
-	tasks?: ITasks[], 
+	tasks?: ITasks[] | null, 
 	inputValue?: string,
 
 }

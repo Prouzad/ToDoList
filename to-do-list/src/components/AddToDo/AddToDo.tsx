@@ -8,11 +8,14 @@ function AddToDo() {
     <div className={style.inputBox}>s
 			<form onSubmit={(e) => {
 				  e.preventDefault();
-          dispatch({
-            type: 'addTask',
-						tasks: [{_id: Date.now(), name: state?.inputValue, done: false, edit: false}]
-          });
-					console.log(state)
+          if(state?.inputValue?.length){
+						dispatch({
+							type: 'addTask',
+							tasks: [{_id: Date.now(), name: state?.inputValue, done: false, edit: false}]
+						});
+					}else{
+						alert('Ti dolboeb')
+					}
 			}}>
 
       	<input type='text' placeholder='Write your task' className={style.input} value={state?.inputValue} onChange={(e) => {
