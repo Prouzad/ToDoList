@@ -1,10 +1,11 @@
-import { useContext} from 'react';
+import { useContext, useEffect} from 'react';
 import { Context } from '../Context';
 import TaskList from './Task/TaskList';
 import style from './TaskBox.module.css'
 import { ITasks } from '../../interface';
 function TaskBox() {
 	const { state, dispatch } = useContext(Context);
+
 
 	const removeTask = (id: number) => {
 		const arr = state?.tasks?.filter((e) => e._id !== id)
@@ -13,8 +14,7 @@ function TaskBox() {
 			type: 'removeTask',
 			tasks: arr
 		})
-
-		console.log(state)
+	
 	}
 
 		const arr = state?.tasks?.sort((x, y) => x!._id! - y!._id!).sort(function(x, y) {
