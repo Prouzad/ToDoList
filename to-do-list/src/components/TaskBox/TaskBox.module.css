@@ -1,0 +1,63 @@
+.tasksBox{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	margin-top: 45px;
+	flex-direction: column;
+
+}
+
+.tasks {
+	cursor: pointer;
+	width: 735px;
+	min-height: 50px;
+	padding: 15px;
+	display: flex;
+	background: rgb(255, 255, 255);
+	margin: 15px;
+	justify-content: space-between;
+	border-radius: 15px;
+	box-shadow: 5px 10px 18px rgb(15, 83, 106, 0.5);
+}
+
+.firstBox{
+	display: flex;
+	align-items: center;
+	font-family: 'Secular One', sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 140%;
+	color:#426ea8;
+}
+
+.secondBox{
+	display: flex;
+	align-items: center;
+	width: 10%;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.name{
+	hyphens: auto;
+	word-wrap: break-word;
+	text-align: start;	
+}
+
+.input{
+	box-sizing: border-box;
+	max-width: 750px;
+	padding: 15px;
+	background: #ffffff;
+	border: none;
+	font-family: 'Secular One', sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 140%;
+	color:#4e7ebd;
+
+}
+
+.input:focus{
+	outline: none;
+}
