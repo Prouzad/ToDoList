@@ -3,6 +3,7 @@ import { Context } from '../Context';
 import TaskList from './Task/TaskList';
 import style from './TaskBox.module.css'
 import { ITasks } from '../../interface';
+
 function TaskBox() {
 	const { state, dispatch } = useContext(Context);
 
@@ -21,7 +22,7 @@ function TaskBox() {
 		return Number(y.done) - Number(x.done);
  	}).map((task: ITasks) => {
     return (
-      <div key={task._id}>
+      <div draggable key={task._id} >
           {<TaskList tasks={task} callback={removeTask} idx={task!._id!} />}
       </div>
     );
