@@ -1,4 +1,4 @@
-import { useContext, useEffect} from 'react';
+import { useContext} from 'react';
 import { Context } from '../Context';
 import TaskList from './Task/TaskList';
 import style from './TaskBox.module.css'
@@ -18,7 +18,7 @@ function TaskBox() {
 	
 	}
 
-		const arr = state?.tasks?.sort((x, y) => x!._id! - y!._id!).sort(function(x, y) {
+	const arr = state?.tasks?.sort((x, y) => x!._id! - y!._id!).sort(function(x, y) {
 		return Number(y.done) - Number(x.done);
  	}).map((task: ITasks) => {
     return (
