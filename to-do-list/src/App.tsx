@@ -18,7 +18,7 @@ function App() {
 	const [state, dispatch] = useReducer(reducer, Startstates);
 
 	useEffect(() => {
-		const tasks = JSON.parse(localStorage.getItem('TaskArray')!)
+		const tasks = JSON.parse(localStorage.getItem('TaskArray')!) || []
 		if(tasks.length){
 			dispatch({
 				type: 'removeTask',
